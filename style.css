@@ -44,3 +44,25 @@ h1{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
+
+.image-container{
+    margin: 10px 30%;
+    /* display: grid;
+    place-items: center; */
+}
+
+.image-container img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* media queries: large smart phone */
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 20px;
+    }
+    .image-container{
+        margin: 10px;
+    }
+}
