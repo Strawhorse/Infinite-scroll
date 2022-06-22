@@ -13,7 +13,7 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 
 const setAttributes = (element, attributes) => {
     for (const key in attributes){
-        element.setAttribute(key, attributes[key]
+        element.setAttribute(key, attributes[key])
     }
 }
 
@@ -56,6 +56,16 @@ async function getPhotos() {
         // catch error here
     }
 }
+
+
+// check to see if scrolling near bottom of page using DOM events
+window.addEventListener('scroll', () => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight -1000){
+        getPhotos()
+    }
+})
+
+
 
 // on load
 getPhotos()
