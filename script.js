@@ -5,7 +5,7 @@ const loader = document.getElementById('loader')
 let photosArray = []
 
 const count = 10
-const apiKey = 'yWXXjOGILXM3alhEDmtPUIFkFse-p6S7uZlY6w7zfsE'
+const apiKey = 'API_KEY_HERE'
 
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`
 
