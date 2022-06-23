@@ -1,16 +1,15 @@
-const { read } = require("fs")
-
 const imageContainer = document.getElementById('image-container')
 const loader = document.getElementById('loader')
+
 let ready = false
 let imagesLoaded = 0
 let totalImages = 0
-
 // use let as values will change
 let photosArray = []
 
-const count = 30
-const apiKey = 'yWXXjOGILXM3alhEDmtPUIFkFse-p6S7uZlY6w7zfsE'
+// unsplash api
+let count = 5
+const apiKey = 'UNSPLASH_API_KEY_HERE'
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`
 
 
@@ -21,6 +20,8 @@ const imageLoaded = () => {
         ready = true
         // hide loader again
         loader.hidden = true;
+        count = 30
+        apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`
     }
 }
 
